@@ -10,8 +10,28 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        debug {
+            storeFile file('/Users/rongyile/ryl.jks')//签名文件路径
+            storePassword "rylryl"
+            keyAlias "ryl"
+            keyPassword "rylryl"  //签名密码
+            println("====== signingConfigs.debug ======")
+        }
+        release {
+            storeFile file('/Users/rongyile/rl.jks')//签名文件路径
+            storePassword "rylryl"
+            keyAlias "ryl"
+            keyPassword "rylryl"  //签名密码
+            println("====== signingConfigs.release ======")
+        }
+    }
+
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
