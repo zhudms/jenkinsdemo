@@ -20,7 +20,7 @@ android {
             println("====== signingConfigs.debug ======")
         }
         release {
-            storeFile file('/Users/rongyile/rl.jks')//签名文件路径
+            storeFile file('/Users/rongyile/ryl.jks')//签名文件路径
             storePassword "rylryl"
             keyAlias "ryl"
             keyPassword "rylryl"  //签名密码
